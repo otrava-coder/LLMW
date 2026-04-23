@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://v67xi48y30oh"]
+
+[ext_resource type="Script" uid="uid://b7je72hqqe08m" path="res://player.gd" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://k68pnnt144pu" path="res://kimi.gd" id="2_fj7yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(32, 32)
+
+[node name="World" type="Node2D" unique_id=1333138027]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1164229457]
+script = ExtResource("1_f3sb7")
+
+[node name="ColorRect" type="ColorRect" parent="player" unique_id=1225660933]
+custom_minimum_size = Vector2(32, 32)
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0.92941177, 0.7058824, 0.6313726, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=572648290]
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="kimi" type="Node" parent="." unique_id=1971277723]
+script = ExtResource("2_fj7yv")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=620355287]
+offset_left = 200.0
+offset_top = 500.0
+offset_right = 952.0
+offset_bottom = 540.0
+placeholder_text = "write a text + enter"
